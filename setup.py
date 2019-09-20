@@ -7,16 +7,16 @@ from distutils.core import setup
 import re
 
 def get_long_description():
-  handle = open("doc/lrparsing.rst")
-  while not next(handle).startswith("====="):
-    pass
-  long_description=[]
-  for line in handle:
-    if line.startswith("====="):
-      break
-    line = re.sub(":[a-z]*:`([^`<]*[^`< ])[^`]*`", "\\1", line)
-    long_description.append(line)
-  return ''.join(long_description[:-1])
+    handle = open("doc/lrparsing.rst")
+    while not next(handle).startswith("====="):
+        pass
+    long_description = []
+    for line in handle:
+        if line.startswith("====="):
+            break
+        line = re.sub(":[a-z]*:`([^`<]*[^`< ])[^`]*`", "\\1", line)
+        long_description.append(line)
+    return ''.join(long_description[:-1])
 
 setup(
     name="lrparsing",
@@ -29,12 +29,13 @@ setup(
     package_dir={"": "lrparsing"},
     py_modules=["lrparsing"],
     classifiers=[
-	  "Development Status :: 4 - Beta",
-	  "Intended Audience :: Developers",
-	  "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
-	  "Natural Language :: English",
-	  "Operating System :: OS Independent",
-	  "Programming Language :: Python :: 2 :: Only",
-	  "Topic :: Software Development :: Libraries :: Python Modules",
+      "Development Status :: 4 - Beta",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+      "Natural Language :: English",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python :: 3.6",
+      "Programming Language :: Python :: 3 :: Only",
+      "Topic :: Software Development :: Libraries :: Python Modules",
       ]
 )
