@@ -22,7 +22,7 @@ setup(
     name="lrparsing",
     description="An LR(1) parser hiding behind a pythonic interface",
     long_description=get_long_description(),
-    version="1.0.4",
+    version="1.0.6",
     author="Russell Stuart",
     author_email="russell-lrparsing@stuart.id.au",
     url="http://www.stuart.id.au/russell/files/lrparsing",
